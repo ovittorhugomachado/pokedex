@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-    background-color: #103183;
+    width: 200px;
+    background-color: ${({theme}) => theme.button};
     border-radius: 8px;
-    border: 2px solid #FFCC01;
+    border: 2px solid ${({theme}) => theme.background};
+    box-shadow: 3px 3px 0px ${({theme}) => theme.shadowContainer};
     padding: 10px 20px;
 `
 
 export const Link = styled.a`
  text-decoration: none;
-    color: #FFCC01;
-    font-size: 25px;
+    color: #0D1833;
+    font-size: 20px;
     font-family: bangers;
 `
