@@ -6,9 +6,11 @@ export const Style = createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
   font-family: geologica, sans-serif;
-    font-weight: 300;
-    list-style: none;
-    font-style: none;
+  font-weight: 300;
+  list-style: none;
+  font-style: none;
+  transition: background-color 0.3s ease, border-color 0.5s ease, box-shadow 0.5s ease; /* Suaviza mudanças em bordas e sombras */
+  
 }
 
 html {

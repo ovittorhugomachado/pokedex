@@ -19,52 +19,6 @@ export const ContainerMain = styled.div`
 
 `;
 
-export const ButtonTogglerTheme = styled.button`
-    width: 50px;
-    height: 23px;
-    background-color: transparent;
-    border: 2px solid ${({ theme }) => theme.borders}; 
-    border-radius: 50px;
-`
-
-export const Selector = styled.div`
-    width: 25px;
-    height: 17px;
-    background-color: ${({ theme }) => theme.title};
-    border-radius: 100px;
-    transform: translateX(${({ theme }) => theme.positionButtonTheme});
-`
-
-export const Icon = styled.a`
-     color: ${({ theme }) => theme.content};
-
-`
-export const DivInputName = styled.div`
-    height: 30px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    border: 1px solid ${({ theme }) => theme.borders};
-    border-radius: 20px;
-    
-    `
-
-export const InputName = styled.input`
-    width: 90%;
-    height: 30px;
-    font-size: 16px;
-    border: none;
-    background-color: transparent;
-    border-radius: 5px;
-    padding: 10px;
-    margin-right: 3px;
-    &::placeholder {
-      color: ${({ theme }) => theme.text};
-    }
-  `;
-
-
-
 export const ContainerTitle = styled.h5`
   margin: 0;
   font-size: 30px;

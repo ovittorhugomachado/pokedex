@@ -15,6 +15,7 @@ export const themes = {
         shadowContainer: '#8f7100',
         shadowCard: '#0D1833',
         button: '#FFD812',
+        textButton: '#103183',
 
     },
     light: {
@@ -27,8 +28,9 @@ export const themes = {
         title: '#0D1833',
         text: '#0D1833',
         shadowContainer: '#284da7',
-        shadowCard: '#FFD812',
+        shadowCard: '#0D1833',
         button: '#103183',
+        textButton: '#FFD812',
     }
 }
 
@@ -36,7 +38,7 @@ export const themes = {
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = (props) => {
-    const [theme, setTheme] = useState(themes.dark)
+    const [theme, setTheme] = useState(themes.light)
 
     const changeTheme = () => {
         setTheme(theme === themes.dark ? themes.light : themes.dark)

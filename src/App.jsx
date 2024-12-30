@@ -7,6 +7,7 @@ import { Main } from './components/main/main'
 import { ButtonBackHome } from './components/button-back-home/button-back-home'
 import { ThemeProvider } from './contexts/theme-context'
 import { GlobalStyle } from './globalStyle'
+import { ButtonLeadMore } from './components/button-lead-more/button-lead-more'
 
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
       <GlobalStyle />
       <Logo />
       <Main />
-      <ButtonBackHome />
+      <ButtonLeadMore />
     </ThemeProvider>
   );
 }
