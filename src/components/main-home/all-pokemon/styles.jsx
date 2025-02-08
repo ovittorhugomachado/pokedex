@@ -16,5 +16,8 @@ export const Card = styled.div`
     border-radius: 10px;
     padding: 20px;
     box-shadow: 4px 4px 0px ${({theme}) => theme.shadowCard};
+`
 
+export const Name = styled.h1`
+    color: ${({ theme }) => theme.title}
 `

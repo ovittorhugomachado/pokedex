@@ -1,39 +1,33 @@
 import { createContext, useState } from "react";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { IoSunny } from "react-icons/io5";
+
 
 export const themes = {
     dark: {
-        icon: <FontAwesomeIcon icon={faSun} />,
-        positionButtonTheme: '1px',
-        buttonTheme:'',
-        background: '#0D1833',
+        icon: <IoSunny />,
+        background: '#0d1833',
         content: '#103183',
-        borders: '#FFD812',
-        title: '#FFD812',
+        borders: '#ffd500',
+        title: '#ffd500',
         text: '#ebebeb',
         shadowContainer: '#8f7100',
-        shadowCard: '#0D1833',
-        button: '#FFD812',
+        shadowCard: '#0d1833',
+        backgroundButton: '#ffd500',
         textButton: '#103183',
-
     },
     light: {
-        icon: <FontAwesomeIcon icon={faMoon} />,
-        positionButtonTheme: '80%',
-        buttonTheme:' ' , 
-        background: '#ebebeb',
-        content: '#ebebeb',
-        borders: '#103183',
-        title: '#0D1833',
-        text: '#0D1833',
-        shadowContainer: '#284da7',
-        shadowCard: '#0D1833',
-        button: '#103183',
-        textButton: '#FFD812',
+        icon: <IoSunny />,
+        background: '#ebebed',
+        content: '#ebebed',
+        borders: '#0d1833',
+        title: '#0d1833',
+        text: '#ebebeb',
+        shadowContainer: '#103183',
+        shadowCard: '#8f7100',
+        backgroundButton: '#103183',
+        textButton: '#ffd500',
     }
 }
-
 
 export const ThemeContext = createContext({});
 

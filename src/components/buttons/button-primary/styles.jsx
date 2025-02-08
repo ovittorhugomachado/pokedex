@@ -1,17 +1,14 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.a`
     width: 200px;
-    background-color: ${({theme}) => theme.button};
+    background-color: ${({theme}) => theme.backgroundButton};
     border-radius: 8px;
     border: 2px solid ${({theme}) => theme.background};
     box-shadow: 3px 3px 0px ${({theme}) => theme.shadowContainer};
     padding: 10px 20px;
-`
-
-export const Link = styled.a`
- text-decoration: none;
+    text-decoration: none;
     color: ${({theme}) => theme.textButton};
     font-size: 20px;
-    font-family: bangers;
+    cursor: pointer;
 `
