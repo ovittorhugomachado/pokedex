@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { createContext, useState } from "react";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -50,3 +51,40 @@ export const ThemeProvider = (props) => {
     )
 }
 
+=======
+import React, { createContext, useState } from 'react';
+
+const themes = {
+    light: {
+      primary: '#FFFFFF',
+      secondary: '#103183',
+      background: '#FFCC01',
+      text: '#000000',
+    },
+    dark: {
+      primary: '#103183',
+      secondary: '#FFCC01',
+      background: '#000000',
+      text: '#FFFFFF',
+    },
+  };
+
+  export const ThemeContext = createContext();
+
+  export const ThemeProvider = ({ children }) => {
+    const [theme, setTheme] = useState(themes.light); // Tema inicial
+  
+    const toggleTheme = () => {
+      setTheme((prevTheme) =>
+        prevTheme === themes.light ? themes.dark : themes.light
+      );
+    };
+  
+    return (
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        {children}
+      </ThemeContext.Provider>
+    );
+  };
+  
+>>>>>>> Stashed changes

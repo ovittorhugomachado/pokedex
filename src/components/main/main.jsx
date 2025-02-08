@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import { useContext } from "react"
 import { ThemeContext } from "../../contexts/theme-context"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -31,3 +32,57 @@ export function Main() {
     )
 }
 
+=======
+import React, { useContext } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretRight } from "@fortawesome/free-solid-svg-icons";
+import { ThemeContext } from "../../contexts/theme-context";
+import {
+  ContainerMain,
+  ContainerTitle,
+  RotatingImage,
+  InputName,
+  DivInputName,
+} from "./styles";
+
+export function Main() {
+  // Consome o tema do contexto
+  const { theme } = useContext(ThemeContext);
+
+  const isHidden = true;
+  return (
+    <ContainerMain style={{ backgroundColor: theme.background, color: theme.text }}>
+      <DivInputName>
+        <InputName
+          id="name"
+          type="text"
+          placeholder="Buscar pelo nome"
+          style={{
+            backgroundColor: theme.primary,
+            color: theme.text,
+            borderColor: theme.secondary,
+          }}
+        />
+        <a href="#">
+          <FontAwesomeIcon
+            icon={faCaretRight}
+            size="2x"
+            color={theme.secondary}
+          />
+        </a>
+      </DivInputName>
+
+      <ContainerTitle
+        hidden={isHidden}
+        style={{ color: theme.text }}
+      >
+        <RotatingImage
+          src="../src/assets/images/logo-loading.png"
+          alt="Logo carregando"
+        />
+        Carregando
+      </ContainerTitle>
+    </ContainerMain>
+  );
+}
+>>>>>>> Stashed changes
