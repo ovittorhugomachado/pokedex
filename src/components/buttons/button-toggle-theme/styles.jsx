@@ -13,5 +13,8 @@ export const Icon = styled.a`
     background-color: ${({theme}) => theme.content};
     position: absolute;
     top: -40px;
+        &:hover {
+        opacity: 0.8;
+    }
     
 `
