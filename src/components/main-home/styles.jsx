@@ -1,6 +1,7 @@
 
 import styled, { keyframes } from "styled-components";
 
+
 export const ContainerMain = styled.div`
     min-height: 400px;
     width: 280px;
@@ -37,7 +38,12 @@ export const Card = styled.div`
     border-radius: 10px;
     padding: 20px;
     box-shadow: 4px 4px 0px ${({theme}) => theme.shadowCard};
+    transform: translateX(10px);
+    margin-bottom: 20px
+`
 
+export const Name = styled.h1`
+    color: ${({ theme }) => theme.title}
 `
 
 export const ContainerLoading = styled.h5`
@@ -64,5 +70,23 @@ export const RotatingImage = styled.img`
 export const Loading = styled.p`
   color: ${({theme}) => theme.text};
   font-weight: 700;
-  font-size: 30px
+  font-size: 30px;
+`
+
+export const Button = styled.button`
+    width: 200px;
+    display: inline-block;
+    background-color: ${({theme}) => theme.backgroundButton};
+    border-radius: 8px;
+    border: 2px solid ${({theme}) => theme.background};
+    box-shadow: 3px 3px 0px ${({theme}) => theme.shadowContainer};
+    padding: 10px 20px;
+    text-decoration: none;
+    color: ${({theme}) => theme.textButton};
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+        &:hover {
+            transform: translate( 2px, 2px);
+        }
 `

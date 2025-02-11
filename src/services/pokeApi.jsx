@@ -1,3 +1,5 @@
+import { LiaCloudsmith } from "react-icons/lia";
+
 const ulrBaseApi = "https://pokeapi.co/api/v2/pokemon"
 
 export async function getPokemon(limit, offset) {

@@ -1,12 +1,12 @@
-import { Button } from './styles'
+import { Button } from './style'
 import { ThemeContext } from '../../../contexts/theme-context'
 import { useContext } from 'react'
 
-export function ButtonLeadMore() {
+export function ButtonShowMore() {
 
     const { theme } = useContext(ThemeContext)
 
     return (
-        <Button theme={theme} href='#'>Carregar mais</Button>
+        <Button theme={theme}>Carregar mais</Button>
     )
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.a`
+export const Button = styled.button`
     width: 200px;
     display: inline-block;
     background-color: ${({theme}) => theme.backgroundButton};
