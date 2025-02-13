@@ -1,5 +1,5 @@
 import { Button } from './style'
-import { ThemeContext } from '../../../contexts/theme-context'
+import { ThemeContext } from '../../contexts/theme-context'
 import { useContext } from 'react'
 
 export function ButtonShowMore() {

@@ -1,9 +1,9 @@
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../../contexts/theme-context";
 import { ContainerLoading, ContainerMain, Loading, RotatingImage, Card, Name, Button } from "./styles";
-import { ButtonToggleTheme } from "../buttons/button-toggle-theme/button-toggle-theme";
+import { ButtonToggleTheme } from "../button-toggle-theme";
 import pokeball from "../../assets/images/logo-pokebola.png";
-import { InputSearch } from "../input-search/input-search";
+import { InputSearch } from "../input-search";
 import { getPokemon, getPokemonsData } from "../../services/pokeApi";
 
 export function MainHome() {
