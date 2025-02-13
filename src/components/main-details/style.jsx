@@ -1,6 +1,4 @@
-
 import styled, { keyframes } from "styled-components";
-
 
 export const ContainerMain = styled.div`
     min-height: 400px;
@@ -18,32 +16,17 @@ export const ContainerMain = styled.div`
     gap: 15px;
     box-shadow: 4px 4px 0px ${({theme}) => theme.shadowContainer};
     position: relative;
->>>>>>> 035ca8c8ce361772a9a2891746178e3bed5809ba:src/components/main/styles.jsx
-
 `;
-
-export const CardPokemon = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px; /* Espaçamento entre os cards */
-  justify-content: center; /* Centraliza os cards no contêiner */
-  margin-top: 20px;
-`;
-
-export const Card = styled.div`
-    width: 180px;
-    height: 200px;
-    background-color: ${({ theme }) => theme.content};
-    border: 1px solid ${({ theme }) => theme.borders};
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 4px 4px 0px ${({theme}) => theme.shadowCard};
-    transform: translateX(10px);
-    margin-bottom: 20px
-`
 
 export const Name = styled.h1`
     color: ${({ theme }) => theme.title}
+`;
+
+export const Title = styled.h3`
+    color: ${({ theme }) => theme.title}
+`
+export const Text = styled.p`
+    color: ${({ theme }) => theme.text}
 `
 
 export const ContainerLoading = styled.h5`

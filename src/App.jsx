@@ -1,11 +1,12 @@
 
 import './App.css'
 import { getPokemon, getPokemonsData } from './services/pokeApi'
-import { MainHome } from './components/main'
+import { MainHome } from './components/main-home'
 import { ThemeProvider } from './contexts/theme-context'
 import { GlobalStyle } from './globalStyle'
 import { ButtonToggleTheme } from './components/button-toggle-theme'
 import { Logo } from './components/logo'
+import { MainDetails } from './components/main-details'
 
 
 
@@ -19,7 +20,7 @@ console.log(getPokemonsData('metapod'))
 
       <Logo />
       <ButtonToggleTheme />
-      <MainHome />
+      <MainDetails />
 
     </ThemeProvider>
   )
