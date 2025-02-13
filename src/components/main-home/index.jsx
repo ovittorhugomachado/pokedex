@@ -5,6 +5,7 @@ import { ButtonToggleTheme } from "../button-toggle-theme";
 import pokeball from "../../assets/images/logo-pokebola.png";
 import { InputSearch } from "../input-search";
 import { getPokemon, getPokemonsData } from "../../services/pokeApi";
+import { Link } from "react-router-dom";
 
 export function MainHome() {
     const { theme } = useContext(ThemeContext);
@@ -33,7 +34,7 @@ export function MainHome() {
         // Adiciona os novos Pokémon à lista existente, evitando duplicados
         setPokemonsList((prevList) => {
             // Filtrando os Pokémon que já estão na lista para evitar duplicação
-            const newPokemons = pokemons.filter(pokemon => 
+            const newPokemons = pokemons.filter(pokemon =>
                 !prevList.some(existingPokemon => existingPokemon.name === pokemon.name)
             );
             return [...prevList, ...newPokemons]; // Adiciona os novos Pokémon à lista
@@ -50,7 +51,7 @@ export function MainHome() {
     // Função para carregar mais Pokémon
     const showMore = () => {
         setOffset((prevOffset) => prevOffset + 10); // Aumenta o offset para carregar a próxima "página"
-        
+
     };
 
     console.log(pokemonsList)
@@ -69,10 +70,13 @@ export function MainHome() {
                 <div>
                     {/* Exibindo os Pokémon */}
                     {pokemonsList.map((pokemon, index) => (
-                        <Card key={index} theme={theme}>
-                            <img width={120} src={pokemon.image} alt={pokemon.name} />
-                            <Name theme={theme}>{pokemon.name}</Name>
-                        </Card>
+                        <Link to={`/pokemon/${pokemon.name}`}>
+                            <Card key={index} theme={theme}>
+                                <img width={120} src={pokemon.image} alt={pokemon.name} />
+                                <Name theme={theme}>{pokemon.name}</Name>
+                            </Card>
+                        </Link>
+
                     ))}
 
                     {/* Botão para carregar mais Pokémon */}

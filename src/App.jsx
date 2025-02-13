@@ -6,7 +6,7 @@ import { ThemeProvider } from './contexts/theme-context'
 import { GlobalStyle } from './globalStyle'
 import { ButtonToggleTheme } from './components/button-toggle-theme'
 import { Logo } from './components/logo'
-import { MainDetails } from './components/main-details'
+import { AppRoutes } from './pages/routes'
 
 
 
@@ -20,7 +20,7 @@ console.log(getPokemonsData('metapod'))
 
       <Logo />
       <ButtonToggleTheme />
-      <MainDetails />
+      <AppRoutes />
 
     </ThemeProvider>
   )
