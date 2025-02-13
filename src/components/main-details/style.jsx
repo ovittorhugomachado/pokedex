@@ -13,19 +13,40 @@ export const ContainerMain = styled.div`
     justify-content: start;
     align-items: center;
     padding: 30px 0;
-    gap: 15px;
+    gap: 5px;
     box-shadow: 4px 4px 0px ${({theme}) => theme.shadowContainer};
     position: relative;
 `;
 
 export const Name = styled.h1`
-    color: ${({ theme }) => theme.title}
+    color: ${({ theme }) => theme.title};
+    font-weight: 900;
+    font-size: 50px;
 `;
 
 export const Title = styled.h3`
-    color: ${({ theme }) => theme.title}
+    color: ${({ theme }) => theme.title};
+    font-weight: 900;
+    font-size: 30px;
+    margin-top: 25px;
 `
+
+export const subTitle = styled.h4`
+    color: ${({ theme }) => theme.text}
+`
+
 export const Text = styled.p`
+    color: ${({ theme }) => theme.text};
+    margin
+`
+
+export const Ul = styled.ul`
+    color: ${({ theme }) => theme.text};
+    list-style-type: disc
+
+`
+
+export const Li = styled.li`
     color: ${({ theme }) => theme.text}
 `
 
