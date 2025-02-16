@@ -3,7 +3,6 @@ import { ThemeContext } from "../../contexts/theme-context";
 import { ContainerLoading, ContainerMain, Loading, RotatingImage, Card, Name, Button } from "./styles";
 import { ButtonToggleTheme } from "../button-toggle-theme";
 import pokeball from "../../assets/images/logo-pokebola.png";
-import { InputSearch } from "../input-search";
 import { getPokemon, getPokemonsData } from "../../services/pokeApi";
 import { Link, useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
@@ -67,7 +66,6 @@ export function MainHome() {
     return (
         <ContainerMain theme={theme}>
             <ButtonToggleTheme />
-            <InputSearch theme={theme} />
 
             {loading ? (
                 <ContainerLoading>

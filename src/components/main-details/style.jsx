@@ -25,7 +25,11 @@ export const ButtonTopMain = styled.a`
     padding: 5px 10px;
     color: ${({ theme }) => theme.borders};
     background-color: ${({theme}) => theme.content};
-    transform: translateY(-80%)
+    transform: translateY(-80%);
+    transition: 0.3s;
+        &:hover {
+            box-shadow: 0 0 8px ${({theme}) => theme.borders}
+        }
 
 `
 
@@ -100,5 +104,8 @@ export const Button = styled.button`
     color: ${({ theme }) => theme.textButton};
     font-size: 20px;
     cursor: pointer;
+    transition: 0.3s;
     transform: translateY(250%);
+      &:hover {
+        transform: scale(105%) translateY(230%)
 `

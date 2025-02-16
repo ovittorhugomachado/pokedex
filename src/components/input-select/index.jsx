@@ -7,11 +7,13 @@ export function InputSearch() {
     const { theme } = useContext(ThemeContext)
 
     return (
-        <DivInputName theme={theme}>
-            <InputName theme={theme} id="name" type="text" placeholder="Buscar pelo nome" />
+        <>
+            <InputName theme={theme} id="name" type="select" placeholder="selecionar tipo" />
             <ButtonSearch>
                 <FaSearch style={ {color: theme.title} } />
             </ButtonSearch>
-        </DivInputName>
+        </>
+            
+
     )
 }

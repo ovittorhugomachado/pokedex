@@ -1,15 +1,6 @@
 import styled from "styled-components"
 
-export const DivInputName = styled.div`
-    height: 30px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    border: 1px solid ${({ theme }) => theme.borders};
-    border-radius: 7px;
-    `
-
-export const InputName = styled.input`
+export const InputType = styled.input`
     width: 100%;
     height: 30px;
     font-size: 16px;

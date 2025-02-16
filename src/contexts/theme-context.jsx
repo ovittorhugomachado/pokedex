@@ -32,7 +32,7 @@ export const themes = {
 export const ThemeContext = createContext({});
 
 export const ThemeProvider = (props) => {
-    const [theme, setTheme] = useState(themes.light)
+    const [theme, setTheme] = useState(themes.dark)
 
     const changeTheme = () => {
         setTheme(theme === themes.dark ? themes.light : themes.dark)
