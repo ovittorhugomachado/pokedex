@@ -18,8 +18,6 @@ export const ContainerMain = styled.div`
     gap: 15px;
     box-shadow: 4px 4px 0px ${({theme}) => theme.shadowContainer};
     position: relative;
->>>>>>> 035ca8c8ce361772a9a2891746178e3bed5809ba:src/components/main/styles.jsx
-
 `;
 
 export const Card = styled.div`

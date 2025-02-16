@@ -14,9 +14,20 @@ export const ContainerMain = styled.div`
     align-items: center;
     padding: 30px 0;
     gap: 5px;
-    box-shadow: 4px 4px 0px ${({theme}) => theme.shadowContainer};
+    box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowContainer};
     position: relative;
 `;
+
+export const ButtonTopMain = styled.a`
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid;
+    padding: 5px 10px;
+    color: ${({ theme }) => theme.borders};
+    background-color: ${({theme}) => theme.content};
+    transform: translateY(-80%)
+
+`
 
 export const Name = styled.h1`
     color: ${({ theme }) => theme.title};
@@ -72,7 +83,7 @@ export const RotatingImage = styled.img`
 `;
 
 export const Loading = styled.p`
-  color: ${({theme}) => theme.text};
+  color: ${({ theme }) => theme.text};
   font-weight: 700;
   font-size: 30px;
 `
@@ -80,17 +91,14 @@ export const Loading = styled.p`
 export const Button = styled.button`
     width: 200px;
     display: inline-block;
-    background-color: ${({theme}) => theme.backgroundButton};
+    background-color: ${({ theme }) => theme.backgroundButton};
     border-radius: 8px;
-    border: 2px solid ${({theme}) => theme.background};
-    box-shadow: 3px 3px 0px ${({theme}) => theme.shadowContainer};
+    border: 2px solid ${({ theme }) => theme.background};
+    box-shadow: 3px 3px 0px ${({ theme }) => theme.shadowContainer};
     padding: 10px 20px;
     text-decoration: none;
-    color: ${({theme}) => theme.textButton};
+    color: ${({ theme }) => theme.textButton};
     font-size: 20px;
     cursor: pointer;
-    transition: transform 0.3s ease;
-        &:hover {
-            transform: translate( 2px, 2px);
-        }
+    transform: translateY(250%);
 `

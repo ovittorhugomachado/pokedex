@@ -1,9 +1,11 @@
 import { useContext, useEffect, useState } from "react";
-import { ContainerMain, Name, Title, Text } from "./style";
+import { ContainerMain, Name, Title, Text, Button, ButtonTopMain } from "./style";
 import { ThemeContext, themes } from "../../contexts/theme-context";
 import { getPokemonsData } from "../../services/pokeApi";
 import { ButtonToggleTheme } from "../button-toggle-theme";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export function MainDetails() {
 
@@ -21,9 +23,19 @@ export function MainDetails() {
 
     const [movements, setMovements] = useState([])
 
+    const navigate = useNavigate()
+
     console.log(currentPokemon)
     console.log(skills)
     console.log(movements)
+
+    const backHome = () => {
+        navigate('/')
+    }
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Rola para o topo ao carregar a página
+    }, []);
 
     useEffect(() => {
         async function pokemonDetails() {
@@ -44,22 +56,27 @@ export function MainDetails() {
     return (
         <ContainerMain theme={theme}>
             <ButtonToggleTheme />
+            <ButtonTopMain theme={theme} onClick={backHome}>voltar</ButtonTopMain>
             <img width={200} src={imagePokemon} />
             <Name theme={theme}>{currentPokemon.name}</Name>
-                <Title theme={theme}>Tipo</Title>
-                {type.map((type, index) => (
+            <Title theme={theme}>Tipo</Title>
+            {type.map((type, index) => (
                 <Text theme={theme} key={index}>{type.type.name}</Text>
-                ))}
+            ))}
 
-                <Title theme={theme}>Hbilidades</Title>
-                {skills.map((skill, index) => (
+            <Title theme={theme}>Hbilidades</Title>
+            {skills.map((skill, index) => (
                 <Text theme={theme} key={index}>{skill.ability.name}</Text>
-                ))}
+            ))}
 
-                <Title theme={theme}>Movimentos</Title>
-                {movements.map((movement, index) => (
-                <Text theme={theme} key={index}>{movement.move.name +' ,'}</Text>
-                ))}
+            <Title theme={theme}>Movimentos</Title>
+            {movements.map((movement, index) => (
+                <Text theme={theme} key={index}>{movement.move.name + ' ,'}</Text>
+            ))}
+
+            <Link to={'/'}>
+                <Button theme={theme}>voltar ao início</Button>
+            </Link>
 
 
         </ContainerMain>
