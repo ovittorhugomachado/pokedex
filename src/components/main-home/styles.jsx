@@ -21,19 +21,22 @@ export const ContainerMain = styled.div`
 `;
 
 export const Card = styled.div`
-    width: 180px;
-    height: 200px;
+    width: 200px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     background-color: ${({ theme }) => theme.content};
     border: 1px solid ${({ theme }) => theme.borders};
     border-radius: 10px;
     padding: 20px;
     box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowCard};
-    transform: translateX(10px);
     margin-bottom: 20px;
     cursor: pointer;
     transition: 0.3s ;
         &:hover {
-            transform: scale(105%) translatex(5%);  
+            transform: scale(105%);  
         }
 `
 
