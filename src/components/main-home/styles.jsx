@@ -14,10 +14,13 @@ export const ContainerMain = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 30px 50px;
+    padding: 30px 0;
     gap: 15px;
     box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowContainer};
     position: relative;
+        @media (min-width: 430px) {
+            padding: 30px 50px;
+        }
 `;
 
 export const Cards = styled.div`

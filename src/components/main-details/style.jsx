@@ -1,8 +1,8 @@
 import styled, { keyframes } from "styled-components";
 
 export const ContainerMain = styled.div`
-    min-height: 400px;
-    width: 280px;
+    min-height: 200px;
+    width: 90%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.borders}; 
@@ -44,6 +44,15 @@ export const Title = styled.h3`
     font-weight: 900;
     font-size: 30px;
     margin-top: 25px;
+`
+
+export const Title2 = styled.h3`
+    color: ${({ theme }) => theme.title};
+    font-weight: 900;
+    font-size: 30px;
+    margin: 25px 0 7px;
+    text-decoration: underline ${({ theme }) => theme.shadowContainer};
+
 `
 
 export const subTitle = styled.h4`

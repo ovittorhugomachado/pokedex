@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
 import { IoSunny } from "react-icons/io5";
+import { FaMoon } from "react-icons/fa";
 
 
 export const themes = {
@@ -16,7 +17,7 @@ export const themes = {
         textButton: '#103183',
     },
     light: {
-        icon: <IoSunny />,
+        icon: <FaMoon />,
         background: '#ebebed',
         content: '#ebebed',
         borders: '#0d1833',
@@ -33,7 +34,7 @@ export const ThemeContext = createContext({});
 
 export const ThemeProvider = (props) => {
     const [theme, setTheme] = useState(themes.dark)
-    
+
     const changeTheme = () => {
         setTheme(theme === themes.dark ? themes.light : themes.dark)
     };

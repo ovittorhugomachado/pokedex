@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ContainerMain, Name, Title, Text, Button, ButtonTopMain } from "./style";
+import { ContainerMain, Name, Title, Text, Button, ButtonTopMain, Title2 } from "./style";
 import { ThemeContext } from "../../contexts/theme-context";
 import { getPokemonsData } from "../../services/pokeApi";
 import { ButtonToggleTheme } from "../button-toggle-theme";
@@ -59,12 +59,12 @@ export function MainDetails() {
                 <Text theme={theme} key={index}>{type.type.name}</Text>
             ))}
 
-            <Title theme={theme}>Hbilidades</Title>
+            <Title2 theme={theme}>Hbilidades</Title2>
             {skills.map((skill, index) => (
                 <Text theme={theme} key={index}>{skill.ability.name}</Text>
             ))}
 
-            <Title theme={theme}>Movimentos</Title>
+            <Title2 theme={theme}>Movimentos</Title2>
             {movements.map((movement, index) => (
                 <Text theme={theme} key={index}>{movement.move.name + ' ,'}</Text>
             ))}
