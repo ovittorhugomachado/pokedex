@@ -29,7 +29,7 @@ export const ButtonTopMain = styled.a`
     transition: 0.3s;
         &:hover {
             box-shadow: 0 0 8px ${({theme}) => theme.borders}
-        }
+            }
 
 `
 

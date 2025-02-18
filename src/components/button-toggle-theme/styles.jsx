@@ -16,6 +16,6 @@ export const Icon = styled.a`
     transition: 0.3s;
         &:hover {
             box-shadow: 0 0 10px ${({theme}) => theme.borders}
-        }
+            }
     
 `

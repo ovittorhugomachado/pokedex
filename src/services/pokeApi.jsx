@@ -10,8 +10,4 @@ export async function getPokemonsData(name) {
     return await response.json();
 }
 
-export async function getFilterType() {
-    const response = await fetch("https://pokeapi.co/api/v2/type");
-    return await response.json();
-}
 

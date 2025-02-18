@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { ContainerMain, Name, Title, Text, Button, ButtonTopMain } from "./style";
-import { ThemeContext, themes } from "../../contexts/theme-context";
+import { ThemeContext } from "../../contexts/theme-context";
 import { getPokemonsData } from "../../services/pokeApi";
 import { ButtonToggleTheme } from "../button-toggle-theme";
 import { useParams } from "react-router-dom";
@@ -25,16 +25,12 @@ export function MainDetails() {
 
     const navigate = useNavigate()
 
-    console.log(currentPokemon)
-    console.log(skills)
-    console.log(movements)
-
     const backHome = () => {
         navigate('/')
     }
 
     useEffect(() => {
-        window.scrollTo(0, 0); // Rola para o topo ao carregar a página
+        window.scrollTo(0, 0);
     }, []);
 
     useEffect(() => {
@@ -52,7 +48,6 @@ export function MainDetails() {
 
     }, [])
 
-    console.log(currentPokemon)
     return (
         <ContainerMain theme={theme}>
             <ButtonToggleTheme />
@@ -77,7 +72,6 @@ export function MainDetails() {
             <Link to={'/'}>
                 <Button theme={theme}>voltar ao início</Button>
             </Link>
-
 
         </ContainerMain>
     )

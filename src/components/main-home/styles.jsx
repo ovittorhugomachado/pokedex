@@ -47,7 +47,7 @@ export const Name = styled.h1`
 export const ContainerLoading = styled.h5`
     margin: 0;
     font-size: 30px;
-    color: #0D1833;
+    color: ${({ theme }) => theme.title};
     display: ${({ hidden }) => (hidden ? 'none' : 'block')};
 `;
 
@@ -87,5 +87,5 @@ export const Button = styled.button`
     transition: 0.3s ;
         &:hover {
             transform: scale(105%) translateY(175%)
-}
+            }
 `

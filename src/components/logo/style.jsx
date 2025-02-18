@@ -10,7 +10,7 @@ export const LogoPokemon = styled.h1`
     background-image: url(../src/assets/images/logo-pokemon.png); /* Define a imagem de fundo */
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    &:hover {
-    transform: scale(1.04);
-  }
+        &:hover {
+            transform: scale(1.04);
+            }
   `;
