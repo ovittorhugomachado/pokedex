@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 
 export const ContainerMain = styled.div`
     min-height: 200px;
-    width: 90%;
+    width: 96%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.borders}; 
@@ -24,12 +24,11 @@ export const ContainerMain = styled.div`
 `;
 
 export const Cards = styled.div`
-
 `
 
 export const Card = styled.div`
-    width: 230px;
-    min-height: 290px;
+    width: 200px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -48,7 +47,8 @@ export const Card = styled.div`
 `
 
 export const Name = styled.h1`
-    color: ${({ theme }) => theme.title}
+    color: ${({ theme }) => theme.title};
+    font-size: 23px;
 `
 
 export const ContainerLoading = styled.h5`

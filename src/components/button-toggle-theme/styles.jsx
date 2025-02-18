@@ -17,5 +17,6 @@ export const Icon = styled.a`
         &:hover {
             box-shadow: 0 0 10px ${({theme}) => theme.borders}
             }
+
     
 `

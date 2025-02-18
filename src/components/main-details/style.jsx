@@ -29,14 +29,56 @@ export const ButtonTopMain = styled.a`
     transition: 0.3s;
         &:hover {
             box-shadow: 0 0 8px ${({theme}) => theme.borders}
-            }
+            };
+        @media (min-width: 675px) {
+            font-size: 21px;
+            transform: translateY(-50%);
+            padding: 10px 15px;
+            border-radius: 30px;
 
+        }
+
+`
+
+export const DivNameAndImage = styled.div`
+    @media (min-width: 675px) {
+        max-width: 660px;
+        padding: 30px 60px;
+        display: flex;
+        align-items: center;
+        }
+`
+
+export const Img = styled.img`
+    @media (min-width: 675px) {
+        grid-area: 0/1/0/1;
+    }
+    @media (min-width: 760px) {
+        width: 250px;    
+    }
+`
+
+export const DivNameAndType = styled.div`
+    @media (min-width: 675px) {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 `
 
 export const Name = styled.h1`
     color: ${({ theme }) => theme.title};
     font-weight: 900;
     font-size: 50px;
+        @media (min-width: 675px) {
+            grid-area: 1/2/2/2;
+            justify-self: center;
+        }
+        @media (min-width: 760px) {
+            font-size: 80px;
+        }
 `;
 
 export const Title = styled.h3`
@@ -44,6 +86,10 @@ export const Title = styled.h3`
     font-weight: 900;
     font-size: 30px;
     margin-top: 25px;
+    @media (min-width: 675px) {
+            grid-area: 2 / 2 / 2 / 3;
+            margin-top: 0;
+    }
 `
 
 export const Title2 = styled.h3`
@@ -55,24 +101,42 @@ export const Title2 = styled.h3`
 
 `
 
+export const DivType = styled.div`
+    @media (min-width: 675px) {
+            grid-area: 2 / 3 / 3 / 3;
+            display: flex;
+            gap: 20px;
+    }
+`
+
 export const subTitle = styled.h4`
     color: ${({ theme }) => theme.text}
 `
 
+export const ListMoves = styled.div`
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+`
+
 export const Text = styled.p`
     color: ${({ theme }) => theme.text};
-    margin
-`
+    line-height: 25px;
+    @media (min-width: 675px) {
+        font-size: 20px;
+    }
 
-export const Ul = styled.ul`
+`
+export const TextType = styled.p`
     color: ${({ theme }) => theme.text};
-    list-style-type: disc
-
+        @media (min-width: 675px) {
+            font-size: 30px;
+        }
+            
 `
 
-export const Li = styled.li`
-    color: ${({ theme }) => theme.text}
-`
 
 export const ContainerLoading = styled.h5`
   margin: 0;

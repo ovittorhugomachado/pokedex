@@ -70,7 +70,7 @@ export function MainHome() {
                 <>
                     {pokemonsList.map((pokemon, index) => (
                             <Card key={index} theme={theme} onClick={() => showDetails(pokemon)}>
-                                <img width={120} height={180} src={pokemon.image} alt={pokemon.name} />
+                                <img width={105} height={180} src={pokemon.image} alt={pokemon.name} />
                                 <Name theme={theme}>{pokemon.name}</Name>
                             </Card>
                     ))}

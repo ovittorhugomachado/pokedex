@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { ContainerMain, Name, Title, Text, Button, ButtonTopMain, Title2 } from "./style";
+import { ContainerMain, Name, Title, Text, Button, ButtonTopMain, Title2, DivNameAndImage, Img, DivType, TextType, DivNameAndType, ListMoves } from "./style";
 import { ThemeContext } from "../../contexts/theme-context";
 import { getPokemonsData } from "../../services/pokeApi";
 import { ButtonToggleTheme } from "../button-toggle-theme";
@@ -52,12 +52,22 @@ export function MainDetails() {
         <ContainerMain theme={theme}>
             <ButtonToggleTheme />
             <ButtonTopMain theme={theme} onClick={backHome}>voltar</ButtonTopMain>
-            <img width={200} src={imagePokemon} />
-            <Name theme={theme}>{currentPokemon.name}</Name>
-            <Title theme={theme}>Tipo</Title>
-            {type.map((type, index) => (
-                <Text theme={theme} key={index}>{type.type.name}</Text>
-            ))}
+            <DivNameAndImage>
+                <Img width={200} src={imagePokemon} />
+                <DivNameAndType>
+                    <Name theme={theme}>{currentPokemon.name}</Name>
+                    <DivType>
+                    <Title theme={theme}>Tipo:</Title>
+                        {type.map((type, index) => (
+                            <TextType theme={theme} key={index}>{type.type.name}</TextType>
+                        ))}
+                    </DivType>
+
+                </DivNameAndType>
+
+
+            </DivNameAndImage>
+
 
             <Title2 theme={theme}>Hbilidades</Title2>
             {skills.map((skill, index) => (
@@ -65,9 +75,13 @@ export function MainDetails() {
             ))}
 
             <Title2 theme={theme}>Movimentos</Title2>
+            <ListMoves>
             {movements.map((movement, index) => (
-                <Text theme={theme} key={index}>{movement.move.name + ' ,'}</Text>
+                <Text theme={theme} key={index}>{`${movement.move.name}, `} </Text>
             ))}
+
+            </ListMoves>
+            
 
             <Link to={'/'}>
                 <Button theme={theme}>voltar ao início</Button>
