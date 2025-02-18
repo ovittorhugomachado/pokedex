@@ -1,6 +1,6 @@
 import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../../contexts/theme-context";
-import { ContainerLoading, ContainerMain, Loading, RotatingImage, Card, Name, Button } from "./styles";
+import { ContainerLoading, ContainerMain, Loading, RotatingImage, Card, Name, Button, Cards } from "./styles";
 import { ButtonToggleTheme } from "../button-toggle-theme";
 import pokeball from "../../assets/images/logo-pokebola.png";
 import { getPokemon, getPokemonsData } from "../../services/pokeApi";
@@ -67,15 +67,15 @@ export function MainHome() {
                     <Loading>Carregando</Loading>
                 </ContainerLoading>
             ) : (
-                <div>
+                <>
                     {pokemonsList.map((pokemon, index) => (
                             <Card key={index} theme={theme} onClick={() => showDetails(pokemon)}>
-                                <img width={120} src={pokemon.image} alt={pokemon.name} />
+                                <img width={120} height={180} src={pokemon.image} alt={pokemon.name} />
                                 <Name theme={theme}>{pokemon.name}</Name>
                             </Card>
                     ))}
                     <Button theme={theme} onClick={showMore}>Carregar mais</Button>
-                </div>
+                </>
             )}
         </ContainerMain>
     );

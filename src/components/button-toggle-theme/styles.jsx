@@ -12,7 +12,7 @@ export const Icon = styled.a`
     color: ${({ theme }) => theme.borders};
     background-color: ${({theme}) => theme.content};
     position: absolute;
-    top: -40px;
+    top: -50px;
     transition: 0.3s;
         &:hover {
             box-shadow: 0 0 10px ${({theme}) => theme.borders}

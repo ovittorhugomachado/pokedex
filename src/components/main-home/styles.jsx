@@ -3,26 +3,30 @@ import styled, { keyframes } from "styled-components";
 
 
 export const ContainerMain = styled.div`
-    min-height: 400px;
-    width: 280px;
+    min-height: 200px;
+    width: 90%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.borders}; 
     margin: 0 auto;
     margin-bottom: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: start;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    padding-top: 30px;
+    padding: 30px 50px;
     gap: 15px;
     box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowContainer};
     position: relative;
 `;
 
+export const Cards = styled.div`
+
+`
+
 export const Card = styled.div`
-    width: 200px;
-    min-height: 210px;
+    width: 230px;
+    min-height: 290px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -32,7 +36,7 @@ export const Card = styled.div`
     border-radius: 10px;
     padding: 20px;
     box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowCard};
-    margin-bottom: 20px;
+    margin: 10px 5px;
     cursor: pointer;
     transition: 0.3s ;
         &:hover {
@@ -84,6 +88,8 @@ export const Button = styled.button`
     font-size: 20px;
     cursor: pointer;
     transform: translateY(190%);
+    position: absolute;
+    bottom: 0;
     transition: 0.3s ;
         &:hover {
             transform: scale(105%) translateY(175%)
