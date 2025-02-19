@@ -3,7 +3,7 @@ import styled, { keyframes } from "styled-components";
 
 
 export const ContainerMain = styled.div`
-    min-height: 200px;
+    min-height: 500px;
     width: 96%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
