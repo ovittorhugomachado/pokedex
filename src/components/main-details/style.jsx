@@ -46,6 +46,7 @@ export const DivNameAndImage = styled.div`
         padding: 30px 60px;
         display: flex;
         align-items: center;
+        gap: 20px;
         }
 `
 
@@ -72,12 +73,8 @@ export const Name = styled.h1`
     color: ${({ theme }) => theme.title};
     font-weight: 900;
     font-size: 50px;
-        @media (min-width: 675px) {
-            grid-area: 1/2/2/2;
-            justify-self: center;
-        }
         @media (min-width: 760px) {
-            font-size: 80px;
+            font-size: 60px;
         }
 `;
 
