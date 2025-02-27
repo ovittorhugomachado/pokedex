@@ -2,7 +2,7 @@ import { useContext, useState, useEffect } from "react";
 import { ThemeContext } from "../../contexts/theme-context";
 import { ContainerLoading, ContainerMain, Loading, RotatingImage, Card, Name, Button, Cards } from "./styles";
 import { ButtonToggleTheme } from "../button-toggle-theme";
-import pokeball from "../../assets/images/logo-pokebola.png";
+import pokeball from "/logo-pokebola.png";
 import { getPokemon, getPokemonsData } from "../../services/pokeApi";
 import { useNavigate } from "react-router-dom";
 

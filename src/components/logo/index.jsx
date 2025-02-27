@@ -2,6 +2,6 @@ import { LogoPokemon } from "./style";
 
 export function Logo() {
 
-    return <LogoPokemon src='/src/assets/images/logo-pokemon.png' />
+    return <LogoPokemon src='/logo-pokemon.png' />
 
 }
