@@ -1,7 +1,7 @@
 # 👨‍💻 Pokedex #
 
 ## 🎯Objetivo :
- Este é um desafio do curso Dev em Dobro, onde o objetivo era usar o método fetch para fazer a requisição da api.
+ Este é um desafio do curso Dev em Dobro, onde o objetivo era usar o método fetch para fazer a requisição da api, de onde era preciso pegar dados como: nome, tipo, movimentos e habilidades.
 
 ---
 
@@ -27,4 +27,8 @@ Como foi esse foi o primeiro desafio em que fiz requisição api tive alguns des
 - **Boas Práticas de Código**: Uso de tags semânticas para melhor estruturação da página.
 
 ## 🎨 Design da Página
+
+Link Figma: https://www.figma.com/design/hKJmYx4gQofLsfFjTqedIU/Pokedex?node-id=0-1&p=f&t=XrKQ5jUOc3LlsXLU-0
+
+
 <img src="/gifs/design-desktop.gif" width="780px">           <img src="/gifs/design-mobile.gif" height="370px">
