@@ -22,7 +22,7 @@ Como foi esse foi o primeiro desafio em que fiz requisição api tive alguns des
 
 ---
 
-## 🎯 Funcionalidades
+## ⚙️ Funcionalidades
 - **Tema**: alternâcia entre temas light e dark.
 - **Boas Práticas de Código**: Uso de tags semânticas para melhor estruturação da página.
 
