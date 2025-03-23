@@ -4,7 +4,7 @@ import styled, { keyframes } from "styled-components";
 
 export const ContainerMain = styled.div`
     min-height: 500px;
-    width: 96%;
+    width: 85%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.borders}; 
@@ -20,6 +20,9 @@ export const ContainerMain = styled.div`
     position: relative;
         @media (min-width: 430px) {
             padding: 30px 50px;
+        }
+        @media (min-width: 1100px) {
+            width: 95%;
         }
 `;
 

@@ -2,7 +2,7 @@ import styled, { keyframes } from "styled-components";
 
 export const ContainerMain = styled.div`
     min-height: 200px;
-    width: 90%;
+    width: 85%;
     background-color: ${({ theme }) => theme.content};
     border-radius: 5px;
     border: 1px solid ${({ theme }) => theme.borders}; 
@@ -16,6 +16,9 @@ export const ContainerMain = styled.div`
     gap: 5px;
     box-shadow: 4px 4px 0px ${({ theme }) => theme.shadowContainer};
     position: relative;
+        @media (min-width: 1100px) {
+            width: 95%;
+        }
 `;
 
 export const ButtonTopMain = styled.a`
